@@ -7,6 +7,11 @@
     --cloud-color:var(--cloud-color)
 }
 
+h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
 body  {
     font-family: 'Roboto', sans-serif;
     color: var(--NAVY-BLUE, #2E2F42);
@@ -15,44 +20,50 @@ body  {
     font-size: 16px;
     font-style: normal;
     background: var(--WHITE, #FFFFFF);
-    width: 1440px;
     border: 1px solid salmon;
 }
 
-header {
-    border: 1px solid green;
-}
+/* .header_wrap {
+display: flex;    
+align-items: center;
+} */
 
 .list {
     display: inline-flex;
     list-style: none;
-    justify-content: space-between;
+}
+
+.list_nav {
+    display: flex;    
+    align-items: center;
     gap: 40px;
 }
 
-.list:first-child {
+.list_nav:first-child {
     margin-left: 0;
   }
 
-.list:last-child {
+.list_nav:last-child {
     margin-right: 0;
   }
 
+.list_address {
+    display: flex;    
+    align-items: center;
+    gap: 40px;
+    margin-left: auto;
+}
+
 .section {
-    padding: 120px 0;
+    padding-bottom: 120px;
+    padding-left: 156px;
+    padding-right: 156px;
 }
 
 .container {
-    margin: 0 auto;
-    width: 1128px;
-    padding: 0 15px;
+    width: 1158px;
     border: 1px solid red;
-}
-
-.link-contact {
-    font-style: normal;
-    list-style: none;
-    text-decoration: none;
+    margin: 0 auto;
 }
 
 .link {
@@ -62,6 +73,9 @@ header {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    font-style: normal;
+    list-style: none;
+    text-decoration: none;
 }
 
 .link:hover,
@@ -70,15 +84,14 @@ header {
     text-decoration: none;
 }
 
-.link-address {
+.link_address {
     color: var(--SLATE, #434455);
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+   
 }
 
 .header-background {
     background: var(--NAVY-BLUE, #2E2F42);
+    flex-shrink: 0;
 }
 
 .logo_web {
@@ -103,27 +116,41 @@ header {
 }
 
 .header-primary {
-    color: var(--WHITE, #FFF);
+    color: var(--WHITE, #FFFFFF);;
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;
+    max-width: 498px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    margin-top: 188px;
+
 }
 
 .button_first {
-    font-family: "Roboto", sans-serif;
-    color: var(--WHITE, #FFF);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
+    padding: 16px 32px;
     background: var(--IRIS, #4D5AE5);
+    border-radius: 4px; 
+    margin: 0 auto;
+    text-align: center;
+    min-width: 169px;
+    border: none;
 }
 
 .button_first:hover,
 .button_first:focus {
     background-color: var(--IRIS, #404bbf);
-    cursor: pointer
+    cursor: pointer;
+}
+
+.button_text {
+    font-family: "Roboto", sans-serif;
+    color: var(--WHITE, #FFFFFF);;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
 }
 
 .list-button {
@@ -143,12 +170,45 @@ header {
     cursor: pointer;
 }
 
+.buttons_section_one {
+    display: inline-flex;
+    justify-content: center;   
+    gap: 24px; 
+    padding-top: 96px;
+}
+
+.header-second {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+}
+
+.list_strategy {
+    display:flex;
+    gap: 24px;
+    padding-top: 120px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.list_strategy > li {
+    flex-basis: calc((100%-72px) /4);
+}
+
 .terms {
     color: var(--NAVY-BLUE, #2E2F42);
     font-size: 20px;
     line-height: 1.2;
     font-weight: 500;
     letter-spacing: 0.02em;
+    padding-bottom: 8px;
 }
 
 .terms-portfolio {
@@ -157,6 +217,7 @@ header {
     line-height: 1.2;
     font-weight: 500;
     letter-spacing: 0.02em;
+    padding-bottom: 8px;
 }
 
 .terms_description {
@@ -164,6 +225,7 @@ header {
     font-weight: 400;
     letter-spacing: 0.02em;
     line-height: 1.5;
+    align-items: flex-start; 
 }
 
 .terms-descrip-portf {
@@ -171,6 +233,17 @@ header {
     font-size: 16px;
     letter-spacing: 0.02em;
     line-height: 1.5;
+    align-items: flex-start; 
+}
+
+.list_doing {
+    display:flex;
+    gap: 24px;
+    list-style-type: none;
+}
+
+.list_doing > li {
+    flex-basis: calc((100%-48px) /3);
 }
 
 .header-third {
@@ -180,6 +253,7 @@ header {
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    padding-bottom: 72px;
 }
 
 .background {
@@ -193,14 +267,74 @@ header {
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    padding-bottom: 72px;
+}
+
+.list_team {
+    display:flex;
+    gap: 24px;
+    list-style-type: none;
+}
+
+.list_team > li > h3 {
+    margin: auto 0;
+    padding-top: 32px;
+}
+
+.list_team > li > p {
+    margin: auto 0;
+    padding-bottom: 32px;
 }
 
 .photo-team {
+    flex-basis: calc((100%-72px) /4);
     background: var(--WHITE, #FFF); 
+    border-radius: 0px 0px 4px 4px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.list_portf {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.photo_portf {
+    border: 1px solid var(--CORNFLOWER, #E7E9FC);
+    flex-basis: calc((100%-144px) /9);
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.list_portf > li > h3 {
+    margin: auto 0;
+    padding-top: 32px;
+}
+
+.list_portfl > li > p {
+    margin: auto 0;
+    padding-bottom: 32px;
 }
 
 .footer-part {
     background: var(--NAVY-BLUE, #2E2F42);
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo_web_footer {
+    color: var(--IRIS, #4D5AE5);
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 100px;
 }
 
 .logo_footer {
@@ -217,4 +351,7 @@ header {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--CLOUD, #F4F4FD);
+    width: 264px;
+    padding-top: 17.5px;
+    padding-bottom: 100px;
 }
