@@ -323,9 +323,6 @@ body  {
     width: calc((100%-72px) /4);
     background: var(--WHITE, #FFF); 
     border-radius: 0px 0px 4px 4px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;  */
 }
 
 .team_div {
